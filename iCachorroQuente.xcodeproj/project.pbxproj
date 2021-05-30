@@ -11,6 +11,7 @@
 		9F439B7F26634CAB00F1A0CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F439B7E26634CAB00F1A0CE /* ContentView.swift */; };
 		9F439B8126634CAF00F1A0CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F439B8026634CAF00F1A0CE /* Assets.xcassets */; };
 		9F439B8426634CAF00F1A0CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F439B8326634CAF00F1A0CE /* Preview Assets.xcassets */; };
+		9F439B8C2663501C00F1A0CE /* CachorroQuenteClasse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F439B8B2663501C00F1A0CE /* CachorroQuenteClasse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		9F439B8026634CAF00F1A0CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F439B8326634CAF00F1A0CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F439B8526634CAF00F1A0CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F439B8B2663501C00F1A0CE /* CachorroQuenteClasse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachorroQuenteClasse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				9F439B7C26634CAB00F1A0CE /* iCachorroQuenteApp.swift */,
 				9F439B7E26634CAB00F1A0CE /* ContentView.swift */,
+				9F439B8B2663501C00F1A0CE /* CachorroQuenteClasse.swift */,
 				9F439B8026634CAF00F1A0CE /* Assets.xcassets */,
 				9F439B8526634CAF00F1A0CE /* Info.plist */,
 				9F439B8226634CAF00F1A0CE /* Preview Content */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F439B8C2663501C00F1A0CE /* CachorroQuenteClasse.swift in Sources */,
 				9F439B7F26634CAB00F1A0CE /* ContentView.swift in Sources */,
 				9F439B7D26634CAB00F1A0CE /* iCachorroQuenteApp.swift in Sources */,
 			);
