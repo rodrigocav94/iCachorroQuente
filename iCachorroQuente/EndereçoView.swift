@@ -97,12 +97,12 @@ struct Enderec_oView: View {
                     })
                     Spacer()
                 }
-                .listRowBackground(!cachorroQuente.entrega.informaçãoCompleta ? Color.gray : Color.blue)
+                .listRowBackground(!cachorroQuente.entrega.informaçãoCompleta ? Color.gray.animation(.default) : Color.blue.animation(.default))
             }.disabled(!cachorroQuente.entrega.informaçãoCompleta)
         }
         .navigationBarTitle("Detalhes da entrega", displayMode: .inline)
         .toast(isPresenting: $mostrandoAlerta, duration: 4, tapToDismiss: true) {
-            AlertToast(type: bemSucedido ? .complete(.blue) : .error(.red), title: "\(bemSucedido ? "Obrigado" : "Erro")", subTitle: mensagemAlerta)
+            AlertToast(type: bemSucedido ? .complete(.blue) : .error(.blue), title: "\(bemSucedido ? "Obrigado" : "Erro")", subTitle: mensagemAlerta)
         }
         .background(
             ZStack {
