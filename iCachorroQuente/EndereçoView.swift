@@ -14,6 +14,11 @@ struct Enderec_oView: View {
     @State private var mostrandoAlerta = false
     @State private var mensagemAlerta = ""
     @State private var bemSucedido = false
+    @State private var cor: Color = .blue
+    @Environment(\.colorScheme) var colorScheme
+    
+    let dispositivoLargura = UIScreen.main.bounds.width
+    let dispositivoAltura = UIScreen.main.bounds.height
     
     func comprar() {
         let numerosMasculinos = ["zero","um", "dois", "três", "quatro", "cinco"]
@@ -64,6 +69,17 @@ struct Enderec_oView: View {
             
             Section(header: Text("Revise seu pedido")) {
                 HStack {
+                    Spacer()
+                    Image(cachorroQuente.saborEscolhido == 0 ? "salgado" : "doce")
+                        .resizable()
+                        .scaledToFit()
+                        .listRowInsets(EdgeInsets())
+                        .frame(height: 200, alignment: .center)
+                        .shadow(color: .black.opacity(0.3), radius: 10, x: 7.0, y: 10.0)
+                    Spacer()
+                }
+                
+                HStack {
                     Text("O valor total é:")
                         .foregroundColor(!cachorroQuente.entrega.informaçãoCompleta ? Color.gray : Color.primary)
                     Spacer()
@@ -76,21 +92,32 @@ struct Enderec_oView: View {
                     Spacer()
                     Button(action: comprar, label: {
                         Text("Finalizar pedido")
+                            .foregroundColor(.white)
+                            .bold()
                     })
                     Spacer()
                 }
+                .listRowBackground(!cachorroQuente.entrega.informaçãoCompleta ? Color.gray : Color.blue)
             }.disabled(!cachorroQuente.entrega.informaçãoCompleta)
-            
-            Image(cachorroQuente.saborEscolhido == 0 ? "salgado" : "doce")
-                .resizable()
-                .scaledToFit()
-                .listRowInsets(EdgeInsets())
-                .colorMultiply(.blue)
         }
         .navigationBarTitle("Detalhes da entrega", displayMode: .inline)
         .toast(isPresenting: $mostrandoAlerta, duration: 4, tapToDismiss: true) {
             AlertToast(type: bemSucedido ? .complete(.blue) : .error(.red), title: "\(bemSucedido ? "Obrigado" : "Erro")", subTitle: mensagemAlerta)
         }
+        .background(
+            ZStack {
+                    if colorScheme == .light {
+                        Color(red: 0.95, green: 0.95, blue: 0.97)
+                            .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    }
+                Image("padraoCachorroQuente")
+                    .resizable(resizingMode: .tile)
+                    .frame(width: dispositivoLargura, height: dispositivoAltura, alignment: .leading)
+                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .colorMultiply(colorScheme == .light ? .black : .white)
+                    .opacity(0.2)
+            }
+        )
     }
 }
 

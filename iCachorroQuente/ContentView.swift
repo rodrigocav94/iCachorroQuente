@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var cachorroQuente = CachorroQuente()
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         NavigationView {
@@ -39,12 +40,44 @@ struct ContentView: View {
                     TextField("Deixe a sua nota aqui", text: $cachorroQuente.notas)
                 }
                 Section(header: Text("Revise suas informações")) {
-                    NavigationLink("Detalhes da entrega", destination: Enderec_oView(cachorroQuente: cachorroQuente))
+                    NavigationLink(
+                        destination: Enderec_oView(cachorroQuente: cachorroQuente),
+                        label: {
+                            Text("Detalhes da entrega")
+                                .bold()
+                                .foregroundColor(.white)
+                        })
+                        .opacity(0)
+                        .background(
+                          HStack {
+                             Text("Revise suas informações")
+                                .foregroundColor(.white)
+                                .bold()
+                             Spacer()
+                             Image(systemName: "chevron.right")
+                               .resizable()
+                               .aspectRatio(contentMode: .fit)
+                               .frame(width: 7)
+                               .foregroundColor(.white)
+                           }
+                        )
                 }
+                .listRowBackground(Color.blue)
             }
             .navigationBarTitle("iCachorroQuente")
-            .preferredColorScheme(.dark)
+            .background(
+                ZStack {
+                    if colorScheme == .light {
+                        Color(red: 0.95, green: 0.95, blue: 0.97)
+                                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    }
+                }
+            )
         }
+    }
+    init() {
+        UITableView.appearance().backgroundColor = UIColor.clear
+        UITableViewCell.appearance().backgroundColor = UIColor.clear
     }
 }
 
