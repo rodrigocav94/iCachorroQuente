@@ -7,5 +7,6 @@ Além disso, ao finalizar o pedido, as informações são enviadas como JSON ao 
 
 Conexão com o servidor bem-sucedida:
 ![Alt Text](https://github.com/rodrigocav94/iCachorroQuente/blob/main/salgadoSucesso.gif)
+
 Conexão com o servidor malsucedida:
 ![Alt Text](https://github.com/rodrigocav94/iCachorroQuente/blob/main/doceFalha.gif)
