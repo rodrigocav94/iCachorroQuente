@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F26028C26644F9E00F39F43 /* EndereçoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26028B26644F9E00F39F43 /* EndereçoView.swift */; };
 		9F439B7D26634CAB00F1A0CE /* iCachorroQuenteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F439B7C26634CAB00F1A0CE /* iCachorroQuenteApp.swift */; };
 		9F439B7F26634CAB00F1A0CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F439B7E26634CAB00F1A0CE /* ContentView.swift */; };
 		9F439B8126634CAF00F1A0CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F439B8026634CAF00F1A0CE /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F26028B26644F9E00F39F43 /* EndereçoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EndereçoView.swift"; sourceTree = "<group>"; };
 		9F439B7926634CAB00F1A0CE /* iCachorroQuente.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCachorroQuente.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F439B7C26634CAB00F1A0CE /* iCachorroQuenteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCachorroQuenteApp.swift; sourceTree = "<group>"; };
 		9F439B7E26634CAB00F1A0CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				9F439B7C26634CAB00F1A0CE /* iCachorroQuenteApp.swift */,
 				9F439B7E26634CAB00F1A0CE /* ContentView.swift */,
+				9F26028B26644F9E00F39F43 /* EndereçoView.swift */,
 				9F439B8B2663501C00F1A0CE /* CachorroQuenteClasse.swift */,
 				9F439B8026634CAF00F1A0CE /* Assets.xcassets */,
 				9F439B8526634CAF00F1A0CE /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F439B8C2663501C00F1A0CE /* CachorroQuenteClasse.swift in Sources */,
+				9F26028C26644F9E00F39F43 /* EndereçoView.swift in Sources */,
 				9F439B7F26634CAB00F1A0CE /* ContentView.swift in Sources */,
 				9F439B7D26634CAB00F1A0CE /* iCachorroQuenteApp.swift in Sources */,
 			);

@@ -28,20 +28,22 @@ struct ContentView: View {
                     Stepper("Quantidade de \(cachorroQuente.saborEscolhido == 0 ? "salsichas" : "morangos"): \(cachorroQuente.salsichasOuMorangos)", value: $cachorroQuente.salsichasOuMorangos, in: 1...5)
                 }
                 
-                Section {
-                    Toggle("Algum adicional?", isOn: $cachorroQuente.querExtras.animation())
+                Section(header: Text("Deseja adicionar algo mais?")) {
+                    Toggle("Pedido especial", isOn: $cachorroQuente.querExtras.animation())
                     if cachorroQuente.querExtras {
                         Toggle("\(cachorroQuente.saborEscolhido == 0 ? cachorroQuente.extraSalgado[0] : cachorroQuente.extraDoce[0])", isOn: $cachorroQuente.extra1)
                         Toggle("\(cachorroQuente.saborEscolhido == 0 ? cachorroQuente.extraSalgado[1] : cachorroQuente.extraDoce[1])", isOn: $cachorroQuente.extra2)
                     }
                 }
-                Section {
-                    NavigationLink("Detalhes da entrega", destination: Text("Em construção"))
+                Section(header: Text("Deseja deixar alguma nota?")) {
+                    TextField("Deixe a sua nota aqui", text: $cachorroQuente.notas)
+                }
+                Section(header: Text("Revise suas informações")) {
+                    NavigationLink("Detalhes da entrega", destination: Enderec_oView(cachorroQuente: cachorroQuente))
                 }
             }
-            
-            
             .navigationBarTitle("iCachorroQuente")
+            .preferredColorScheme(.dark)
         }
     }
 }
