@@ -59,11 +59,18 @@ struct Enderec_oView: View {
                 TextField("Nome", text: $cachorroQuente.entrega.nome)
                 TextField("Endereço", text: $cachorroQuente.entrega.endereço)
                 TextField("Cidade", text: $cachorroQuente.entrega.cidade)
-                Picker("Estado", selection: $cachorroQuente.entrega.estadoEscolhido) {
+                
+                Picker(selection: $cachorroQuente.entrega.estadoEscolhido, label:
+                        Text(cachorroQuente.entrega.estados[cachorroQuente.entrega.estadoEscolhido])
+                        .foregroundColor(.primary)
+                    , content: {
                     ForEach(0..<cachorroQuente.entrega.estados.count) { estado in
                         Text(cachorroQuente.entrega.estados[estado])
                     }
-                }
+                })
+                .pickerStyle(MenuPickerStyle())
+                    .layoutPriority(1)
+                
                 TextField("CEP", text: $cachorroQuente.entrega.cep).keyboardType(.numberPad)
             }
             
