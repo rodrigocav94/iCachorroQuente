@@ -5,8 +5,7 @@ Permite selecionar diversas opções de cachorro-quentes com uma variedade de pr
 
 Além disso, ao finalizar o pedido, as informações são enviadas como JSON ao servidor reqres.in, que se houver sucesso, responderá enviado o mesmo objeto de volta para ser interpretado e mostrado ao cliente em uma notificação, que utiliza a biblioteca Alert Toast do CocoaPods.
 
-Conexão com o servidor bem-sucedida:
-![Alt Text](https://github.com/rodrigocav94/iCachorroQuente/blob/main/salgadoSucesso.gif)
+Exemplos de tela de conexão bem-sucedida e malsucedida:
 
-Conexão com o servidor malsucedida:
+![Alt Text](https://github.com/rodrigocav94/iCachorroQuente/blob/main/salgadoSucesso.gif)
 ![Alt Text](https://github.com/rodrigocav94/iCachorroQuente/blob/main/doceFalha.gif)
