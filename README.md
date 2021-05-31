@@ -1,6 +1,6 @@
 # iCachorroQuente
 Este aplicativo simula a interface de uma loja de cachorro-quentes fictícia.
 
-Permite selecionar entre diversas opções, dispondo de uma variedade de preços, armazena as informações localmente e as utiliza como padrão sempre que o usuário reabrir o app.
+Permite selecionar diversas opções cachorro-quentes com uma variedade de preços, armazena as informações do cliente localmente e as utiliza como padrão sempre que o aplicativo for reaberto.
 
-Ao finalizar o pedido, suas informações serão enviadas como JSON ao servidor reqres.in, se houver sucesso, o servidor enviará o mesmo objeto de volta, que será interpretado e mostrado ao usuário em uma notificação, utilizando a library Alert Toast do CocoaPods.
+Além disso, ao finalizar o pedido, as informações serão enviadas como JSON ao servidor reqres.in, que se houver sucesso, responderá enviado o mesmo objeto de volta para ser interpretado e mostrado ao cliente em uma notificação, que utiliza a biblioteca Alert Toast do CocoaPods.
