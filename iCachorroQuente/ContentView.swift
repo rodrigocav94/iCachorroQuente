@@ -21,12 +21,20 @@ struct ContentView: View {
                         }
                     }
                     .pickerStyle(SegmentedPickerStyle())
-                    Picker("Selecione o Tipo", selection: $cachorroQuente.tipoEscolhido) {
+                    
+                    Picker(selection: $cachorroQuente.tipoEscolhido, label: HStack {
+                        Text("Selecione o tipo:")
+                            .foregroundColor(.primary)
+                        Spacer()
+                        Text(cachorroQuente.saborEscolhido == 0 ? cachorroQuente.tipoSalgado[cachorroQuente.tipoEscolhido] : cachorroQuente.tipoDoce[cachorroQuente.tipoEscolhido])
+                    }, content: {
                         ForEach(0 ..< 5) { tipo in
                             Text(cachorroQuente.saborEscolhido == 0 ? cachorroQuente.tipoSalgado[tipo] : cachorroQuente.tipoDoce[tipo])
                         }
-                    }
-                    Stepper("Quantidade de \(cachorroQuente.saborEscolhido == 0 ? "salsichas" : "morangos"): \(cachorroQuente.salsichasOuMorangos)", value: $cachorroQuente.salsichasOuMorangos, in: 1...5)
+                    })
+                    .pickerStyle(MenuPickerStyle())
+                    
+                    Stepper("Quant. de \(cachorroQuente.saborEscolhido == 0 ? "salsichas" : "morangos"): \(cachorroQuente.salsichasOuMorangos)", value: $cachorroQuente.salsichasOuMorangos, in: 1...5)
                 }
                 
                 Section(header: Text("Deseja adicionar algo mais?")) {
