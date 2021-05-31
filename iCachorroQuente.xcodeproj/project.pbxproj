@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02A275F608C51823AEF96152 /* Pods_iCachorroQuente.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3E13C51E3AF77C7F2DB372 /* Pods_iCachorroQuente.framework */; };
 		9F26028C26644F9E00F39F43 /* EndereçoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26028B26644F9E00F39F43 /* EndereçoView.swift */; };
 		9F439B7D26634CAB00F1A0CE /* iCachorroQuenteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F439B7C26634CAB00F1A0CE /* iCachorroQuenteApp.swift */; };
 		9F439B7F26634CAB00F1A0CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F439B7E26634CAB00F1A0CE /* ContentView.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4347BBFCF79E8B8BABA6C25B /* Pods-iCachorroQuente.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCachorroQuente.debug.xcconfig"; path = "Target Support Files/Pods-iCachorroQuente/Pods-iCachorroQuente.debug.xcconfig"; sourceTree = "<group>"; };
+		9C3E13C51E3AF77C7F2DB372 /* Pods_iCachorroQuente.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCachorroQuente.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F26028B26644F9E00F39F43 /* EndereçoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EndereçoView.swift"; sourceTree = "<group>"; };
 		9F439B7926634CAB00F1A0CE /* iCachorroQuente.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCachorroQuente.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F439B7C26634CAB00F1A0CE /* iCachorroQuenteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCachorroQuenteApp.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		9F439B8326634CAF00F1A0CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F439B8526634CAF00F1A0CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F439B8B2663501C00F1A0CE /* CachorroQuenteClasse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachorroQuenteClasse.swift; sourceTree = "<group>"; };
+		DB1B9F00E1BDB5AEAD7F4E69 /* Pods-iCachorroQuente.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCachorroQuente.release.xcconfig"; path = "Target Support Files/Pods-iCachorroQuente/Pods-iCachorroQuente.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02A275F608C51823AEF96152 /* Pods_iCachorroQuente.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92C1798D3D77E5F01AA11A8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C3E13C51E3AF77C7F2DB372 /* Pods_iCachorroQuente.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F439B7026634CAA00F1A0CE = {
 			isa = PBXGroup;
 			children = (
 				9F439B7B26634CAB00F1A0CE /* iCachorroQuente */,
 				9F439B7A26634CAB00F1A0CE /* Products */,
+				A07FA24BC2B2FB4CFB5B64C2 /* Pods */,
+				92C1798D3D77E5F01AA11A8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +90,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A07FA24BC2B2FB4CFB5B64C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4347BBFCF79E8B8BABA6C25B /* Pods-iCachorroQuente.debug.xcconfig */,
+				DB1B9F00E1BDB5AEAD7F4E69 /* Pods-iCachorroQuente.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F439B8826634CAF00F1A0CE /* Build configuration list for PBXNativeTarget "iCachorroQuente" */;
 			buildPhases = (
+				1D66FA7C1DE8FD480AEBF7B8 /* [CP] Check Pods Manifest.lock */,
 				9F439B7526634CAB00F1A0CE /* Sources */,
 				9F439B7626634CAB00F1A0CE /* Frameworks */,
 				9F439B7726634CAB00F1A0CE /* Resources */,
+				6DCCDE9A6D88371D48A34DBB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D66FA7C1DE8FD480AEBF7B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iCachorroQuente-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DCCDE9A6D88371D48A34DBB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iCachorroQuente/Pods-iCachorroQuente-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iCachorroQuente/Pods-iCachorroQuente-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iCachorroQuente/Pods-iCachorroQuente-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9F439B7526634CAB00F1A0CE /* Sources */ = {
@@ -272,6 +341,7 @@
 		};
 		9F439B8926634CAF00F1A0CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4347BBFCF79E8B8BABA6C25B /* Pods-iCachorroQuente.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,6 +364,7 @@
 		};
 		9F439B8A26634CAF00F1A0CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB1B9F00E1BDB5AEAD7F4E69 /* Pods-iCachorroQuente.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -7,9 +7,9 @@
 
 import Foundation
 
-class CachorroQuente: ObservableObject {
+class CachorroQuente: ObservableObject, Codable {
 
-    struct ValorAntigo {
+    struct ValorAntigo: Codable {
         var tipoEscolhido = 0
         var salsichasOuMorangos = 1
         var querExtras = false
@@ -105,5 +105,35 @@ class CachorroQuente: ObservableObject {
                 return
             }
         }
+    }
+    
+    enum CodingKeys: CodingKey {
+        case valorAntigo, saborEscolhido, tipoEscolhido, salsichasOuMorangos,querExtras, extra1, extra2, notas, entrega
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        valorAntigo = try container.decode(ValorAntigo.self, forKey: .valorAntigo)
+        saborEscolhido = try container.decode(Int.self, forKey: .saborEscolhido)
+        tipoEscolhido = try container.decode(Int.self, forKey: .tipoEscolhido)
+        salsichasOuMorangos = try container.decode(Int.self, forKey: .salsichasOuMorangos)
+        querExtras = try container.decode(Bool.self, forKey: .querExtras)
+        extra1 = try container.decode(Bool.self, forKey: .extra1)
+        extra2 = try container.decode(Bool.self, forKey: .extra2)
+        notas = try container.decode(String.self, forKey: .notas)
+        entrega = try container.decode(InformaçõesDeEntrega.self, forKey: .entrega)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(valorAntigo, forKey: .valorAntigo)
+        try container.encode(saborEscolhido, forKey: .saborEscolhido)
+        try container.encode(tipoEscolhido, forKey: .tipoEscolhido)
+        try container.encode(salsichasOuMorangos, forKey: .salsichasOuMorangos)
+        try container.encode(querExtras, forKey: .querExtras)
+        try container.encode(extra1, forKey: .extra1)
+        try container.encode(extra2, forKey: .extra2)
+        try container.encode(notas, forKey: .notas)
+        try container.encode(entrega, forKey: .entrega)
     }
 }
