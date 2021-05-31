@@ -82,6 +82,21 @@ class CachorroQuente: ObservableObject {
         }
     }
     
+    var preço: Double {
+        var tempPreço = 2.0
+        tempPreço += Double(tipoEscolhido + 1) * 0.5
+        tempPreço += Double(salsichasOuMorangos) * 0.75
+        if querExtras == true {
+            if extra1 == true {
+                tempPreço += 1.5
+            }
+            if extra2 == true {
+                tempPreço += 1
+            }
+        }
+        return tempPreço
+    }
+    
     init() {
         if let entregaDefault = UserDefaults.standard.data(forKey: "entrega") {
             let decoder = JSONDecoder()

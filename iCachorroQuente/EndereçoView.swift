@@ -9,6 +9,9 @@ import SwiftUI
 
 struct Enderec_oView: View {
     @ObservedObject var cachorroQuente = CachorroQuente()
+    
+    @State private var mostrandoAlerta = false
+    
     var body: some View {
         Form {
             Section(header: Text("Revise suas informações")) {
@@ -28,7 +31,7 @@ struct Enderec_oView: View {
                     Text("O valor total é:")
                         .foregroundColor(!cachorroQuente.entrega.informaçãoCompleta ? Color.gray : Color.primary)
                     Spacer()
-                    Text("R$10,00")
+                    Text("R$\(cachorroQuente.preço, specifier: "%.2f")")
                         .foregroundColor(!cachorroQuente.entrega.informaçãoCompleta ? Color.gray : Color.primary)
                         .bold()
                 }
