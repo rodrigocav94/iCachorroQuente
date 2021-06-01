@@ -19,7 +19,7 @@ class CachorroQuente: ObservableObject, Codable {
     }
     
     struct InformaçõesDeEntrega: Codable {
-        let estados = ["Alagoas", "Bahia", "Ceará", "Maranhão", "Paraíba", "Pernambuco", "Piauí", "Rio Grande do Norte", "Sergipe"]
+        var estados = ["Alagoas", "Bahia", "Ceará", "Maranhão", "Paraíba", "Pernambuco", "Piauí", "Rio Grande do Norte", "Sergipe"]
         var nome = ""
         var endereço = ""
         var cidade = ""

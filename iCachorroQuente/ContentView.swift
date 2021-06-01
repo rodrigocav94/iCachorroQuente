@@ -47,7 +47,7 @@ struct ContentView: View {
                 Section(header: Text("Deseja deixar alguma nota?")) {
                     TextField("Deixe a sua nota aqui", text: $cachorroQuente.notas)
                 }
-                Section(header: Text("Revise suas informações")) {
+                Section(header: Text("Revisar informações")) {
                     NavigationLink(
                         destination: Enderec_oView(cachorroQuente: cachorroQuente),
                         label: {
